@@ -1,0 +1,15 @@
+version: '2'
+services:
+  configserver:
+    extends:
+      file: ../common/docker-compose.yml
+      service: configserver
+  licensingservice:
+    image: ivanjiang/licensing-service:ch3
+    ports:
+    - 8899:8899
+    environment:
+      PROFILE: "dev"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: 8888
+      ENCRYPT_KEY: "IMSYMMETRIC"

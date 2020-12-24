@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: eurekaservice
+  profiles:
+    active: dev
+  cloud:
+    config:
+      name: eurekaservice
+---
+
+spring:
+  profiles: dev
+  cloud:
+    config:
+      uri: http://localhost:8888
+      profile: dev
+
+---
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888

@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: licensingservice
+  profiles:
+    active: dev
+  cloud:
+    config:
+      name: licensingservice
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+---
+
+spring:
+  profiles: dev
+  cloud:
+    config:
+      uri: http://localhost:8888
+      profile: dev
+
+---
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888

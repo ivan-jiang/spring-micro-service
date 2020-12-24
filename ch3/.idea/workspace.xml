@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5bea4e8b-aa2d-4d99-8f29-f99441a46055" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../maven" />
+        <option name="userSettingsFile" value="D:\dev\maven\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1lgyRkDEEUm2ZZY4XrFAjbTUjYl" />
+  <component name="ProjectViewState">
+    <option name="flattenModules" value="true" />
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../micro-service-ch4" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\dev\alicode\spring-microservice-in-action\micro-service-ch3\docker\dev" />
+      <recent name="D:\dev\alicode\spring-microservice-in-action\micro-service-ch3\config-service\src\main\resources\config" />
+      <recent name="D:\dev\alicode\spring-microservice-in-action\micro-service-ch3\licensing-service\src\main\java\com\ivan\licenses" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.config-service [docker:build]">
+    <configuration name="config-service [docker:build]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="docker:build" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/config-service" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="config-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ivan.configsrv.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ivan.configsrv.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LicenseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="licensing-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ivan.licenses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ivan.licenses.LicenseApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Maven.config-service [docker:build]" />
+        <item itemvalue="Spring Boot.LicenseApplication" />
+        <item itemvalue="Spring Boot.ConfigServerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5bea4e8b-aa2d-4d99-8f29-f99441a46055" name="Default Changelist" comment="" />
+      <created>1608033022856</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608033022856</updated>
+      <workItem from="1608033026370" duration="4987000" />
+      <workItem from="1608081498697" duration="8514000" />
+      <workItem from="1608090400163" duration="8164000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="191" y="0" key="#Project_Structure" timestamp="1608037515389">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="191" y="0" key="#Project_Structure/0.0.1600.852@0.0.1600.852" timestamp="1608037515389" />
+    <state x="272" y="0" key="#config-service_[docker:build]_(1)" timestamp="1608090624136">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="272" y="0" key="#config-service_[docker:build]_(1)/0.0.1600.852@0.0.1600.852" timestamp="1608090624136" />
+    <state x="476" y="63" key="FileChooserDialogImpl" timestamp="1608105086303">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="476" y="63" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1608105086303" />
+    <state x="518" y="278" key="Github.CreateGistDialog" timestamp="1608093777151">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="518" y="278" key="Github.CreateGistDialog/0.0.1600.852@0.0.1600.852" timestamp="1608093777151" />
+    <state width="1532" height="358" key="GridCell.Tab.0.bottom" timestamp="1608105087214">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1532" height="358" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1608105087214" />
+    <state width="1532" height="358" key="GridCell.Tab.0.center" timestamp="1608105087214">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1532" height="358" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1608105087214" />
+    <state width="1532" height="358" key="GridCell.Tab.0.left" timestamp="1608105087214">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1532" height="358" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1608105087214" />
+    <state width="1532" height="358" key="GridCell.Tab.0.right" timestamp="1608105087214">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1532" height="358" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1608105087214" />
+    <state width="1532" height="358" key="GridCell.Tab.1.bottom" timestamp="1608105087215">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1532" height="358" key="GridCell.Tab.1.bottom/0.0.1600.852@0.0.1600.852" timestamp="1608105087215" />
+    <state width="1532" height="358" key="GridCell.Tab.1.center" timestamp="1608105087215">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1532" height="358" key="GridCell.Tab.1.center/0.0.1600.852@0.0.1600.852" timestamp="1608105087215" />
+    <state width="1532" height="358" key="GridCell.Tab.1.left" timestamp="1608105087214">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1532" height="358" key="GridCell.Tab.1.left/0.0.1600.852@0.0.1600.852" timestamp="1608105087214" />
+    <state width="1532" height="358" key="GridCell.Tab.1.right" timestamp="1608105087215">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1532" height="358" key="GridCell.Tab.1.right/0.0.1600.852@0.0.1600.852" timestamp="1608105087215" />
+    <state x="327" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1608090400976">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="327" y="165" key="com.intellij.ide.util.TipDialog/0.0.1600.852@0.0.1600.852" timestamp="1608090400976" />
+    <state x="0" y="0" key="new project wizard" timestamp="1608033078794">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="0" y="0" key="new project wizard/0.0.1600.852@0.0.1600.852" timestamp="1608033078794" />
+    <state x="293" y="-2" width="1009" height="1470" key="search.everywhere.popup" timestamp="1608087210053">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="293" y="-2" width="1009" height="1470" key="search.everywhere.popup/0.0.1600.852@0.0.1600.852" timestamp="1608087210053" />
+  </component>
+</project>

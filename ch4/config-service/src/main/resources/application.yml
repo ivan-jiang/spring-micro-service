@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          search-paths: licensingservice,organizationservice
+          uri: https://github.com/ivan-jiang/config-repo
+          username: 79993067@qq.com
+          password: UotX62UbyO
+          default-label: master
+        encrypt:
+          enabled: false
+      discovery:
+        enabled: true
+
+  application:
+    name: config-service

@@ -1,0 +1,15 @@
+version: '2'
+services:
+  configserver:
+    image: ivanjiang/config-service:ch3
+    ports:
+      - 8888:8888
+    environment:
+      ENCRYPT_KEY: "IMSYMMETRIC"
+  licensingservice:
+    image: ivanjiang/licensing-service:ch3
+    environment:
+      PROFILE: "default"
+      CONFIGSERVER_URI: "http://configserver:8888"
+      CONFIGSERVER_PORT: 8888
+      ENCRYPT_KEY: "IMSYMMETRIC"
