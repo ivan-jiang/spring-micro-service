@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class UserInfo {
-    private String organizationid;
+    private String organizationId;
     private String userId;
 }
