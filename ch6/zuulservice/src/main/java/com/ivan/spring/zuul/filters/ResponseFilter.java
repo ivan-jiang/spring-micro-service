@@ -6,20 +6,18 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.util.UUID;
 
 @Component
 @Slf4j
-public class TrackingFilter extends ZuulFilter {
+public class ResponseFilter extends ZuulFilter {
     private static final boolean SHOULD_FILTER = true;
     private static final int ORDER = 1;
-
     @Resource
     FilterUtils filterUtils;
 
     @Override
     public String filterType() {
-        return FilterUtils.PRE_FILTER_TYPE;
+        return FilterUtils.POST_FILTER_TYPE;
     }
 
     @Override
@@ -34,14 +32,8 @@ public class TrackingFilter extends ZuulFilter {
 
     @Override
     public Object run() {
-        // CorrelationId为空，创建一个，设置到RequestContext
-        if (filterUtils.getCorrelationId() == null) {
-            String corrId = UUID.randomUUID().toString();
-            filterUtils.setCorrelationId(corrId);
-        }
-
         RequestContext context = RequestContext.getCurrentContext();
-        log.info("uri:{}", context.getRequest().getRequestURI());
+        context.addZuulResponseHeader(FilterUtils.CORRELATION_ID, filterUtils.getCorrelationId());
         return null;
     }
 }

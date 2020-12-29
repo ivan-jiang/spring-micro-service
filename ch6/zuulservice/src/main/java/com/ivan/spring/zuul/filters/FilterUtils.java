@@ -60,6 +60,7 @@ public class FilterUtils {
 
     public String getServiceId() {
         RequestContext context = RequestContext.getCurrentContext();
-        return context.getZuulRequestHeaders().get(SERVICE_ID);
+        if (context.get("serviceId") == null) return "";
+        return context.get("serviceId").toString();
     }
 }
