@@ -10,8 +10,11 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.sleuth.Span;
+import org.springframework.cloud.sleuth.Tracer;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -28,11 +31,12 @@ public class LicenseService {
 
     @Autowired
     OrganizationRestTemplateClient organizationRestClient;
-
+    @Resource
+    Tracer tracer;
 
     public License getLicense(String orgId, String licenseId) {
-        License license = licenseRepository.findByOrganizationIdAndLicenseId(orgId, licenseId);
-
+        log.info("getLicense {},{}", orgId, licenseId);
+        License license = queryLicense(orgId, licenseId);
         Organization org = getOrganization(orgId);
         license.setOrganizationName(org.getName());
         license.setContactName(org.getContactName());
@@ -90,6 +94,17 @@ public class LicenseService {
 
         fallbackList.add(license);
         return fallbackList;
+    }
+
+    private License queryLicense(String orgId, String licenseId) {
+        Span span = tracer.createSpan("findLicenseDBCall");
+        License license = licenseRepository.findByOrganizationIdAndLicenseId(orgId, licenseId);
+        span.tag(Span.SPAN_PEER_SERVICE_TAG_NAME, "mysql");
+        span.logEvent(Span.CLIENT_RECV);
+        tracer.close(span);
+
+        log.info("queryLicenseFromMysql");
+        return license;
     }
 
     public void saveLicense(License license) {

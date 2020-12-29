@@ -4,9 +4,9 @@ server:
   #Setting logging levels
 logging:
   level:
-    com.netflix: WARN
-    org.springframework.web: WARN
-    com.thoughtmechanix: DEBUG
+    com.netflix: INFO
+    org.springframework.web: INFO
+    com.ivan.spring: DEBUG
 
 eureka:
   instance:
