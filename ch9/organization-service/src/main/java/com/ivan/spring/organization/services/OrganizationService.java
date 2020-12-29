@@ -2,18 +2,35 @@ package com.ivan.spring.organization.services;
 
 import com.ivan.spring.organization.model.Organization;
 import com.ivan.spring.organization.repository.OrganizationRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.sleuth.Span;
+import org.springframework.cloud.sleuth.Tracer;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.UUID;
 
 @Service
+@Slf4j
 public class OrganizationService {
-    @Autowired
+    @Resource
     private OrganizationRepository orgRepository;
+    @Resource
+    Tracer tracer;
 
     public Organization getOrg(String organizationId) {
-        return orgRepository.findById(organizationId);
+        Span span = tracer.createSpan("getOrganizationDBCall");
+        try {
+            return orgRepository.findById(organizationId);
+        } catch (Exception e) {
+            log.error("error when get organization {} from db", organizationId, e);
+        } finally {
+            span.tag(Span.SPAN_PEER_SERVICE_TAG_NAME, "mysql");
+            span.logEvent(Span.SERVER_SEND);
+            tracer.close(span);
+        }
+
+        return null;
     }
 
     public void saveOrg(Organization org) {

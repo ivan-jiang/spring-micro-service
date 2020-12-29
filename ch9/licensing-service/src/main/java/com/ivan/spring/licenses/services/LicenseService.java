@@ -30,10 +30,10 @@ public class LicenseService {
     OrganizationRestTemplateClient organizationRestClient;
 
 
-    public License getLicense(String organizationId, String licenseId) {
-        License license = licenseRepository.findByOrganizationIdAndLicenseId(organizationId, licenseId);
+    public License getLicense(String orgId, String licenseId) {
+        License license = licenseRepository.findByOrganizationIdAndLicenseId(orgId, licenseId);
 
-        Organization org = getOrganization(organizationId);
+        Organization org = getOrganization(orgId);
         license.setOrganizationName(org.getName());
         license.setContactName(org.getContactName());
         license.setContactEmail(org.getContactEmail());
@@ -43,8 +43,8 @@ public class LicenseService {
     }
 
     @HystrixCommand
-    private Organization getOrganization(String organizationId) {
-        return organizationRestClient.getOrganization(organizationId);
+    private Organization getOrganization(String orgId) {
+        return organizationRestClient.getOrganization(orgId);
     }
 
     private void randomlyRunLong() {
